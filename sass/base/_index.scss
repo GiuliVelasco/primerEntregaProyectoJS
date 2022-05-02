@@ -1,0 +1,65 @@
+@import "../components/variables";
+@import "../components/mapas";
+@import "../components/mixins";
+
+.mainIndex{
+    background: linear-gradient(180deg, rgba(129,0,0,1) 0%, rgba(206,18,18,1) 70%);
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "parrafo parrafo imagen"
+    "videos videos videos";
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
+    .titulo{
+        grid-area: titulo;
+        h1{
+            @include encabezados;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+    }
+    .bloque1-descripcion{
+        grid-area: parrafo;
+        font-size: map-get($parrafo-estandar, size-estandar);
+        color: map-get($parrafo-estandar, color-estandar);
+        text-align: center;
+        margin: 6rem 4rem 0 5rem;
+    }
+    .bloque1-imagen{
+        grid-area: imagen;
+        img{
+            width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            border-radius: 2px;
+        }
+    }
+    .videos{
+        grid-area: videos;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: $color-ppal;
+    }
+    .bloque2-video{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 30%;
+        .contenedor{
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%;
+            iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }   
+    }
+}

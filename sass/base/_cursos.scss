@@ -1,0 +1,132 @@
+@import"../components/variables";
+@import"../components/mixins";
+
+main{
+    .container-fluid{
+        .row{
+            h1{
+                @include encabezados;
+            }
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .carousel{
+                width: 55%;
+                .carousel-inner{
+                    .carousel-item{
+                        div{
+                            p{
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            form{
+                width: 43%;
+                margin-top: 0;
+                margin-bottom: 15px;
+                margin-right: 15px;
+                fieldset{
+                    display: flex;
+                    flex-direction: column;
+                    legend{
+                        @include h3;
+                    }
+                    div{
+                        margin-top: 5px;
+                        label{
+                            color: $color-ppal;
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 16px;
+                        }
+                        input{
+                            color: black;
+                            width: 75%;
+                            background-color: $color-ppal;
+                            opacity: 95%;
+                            border-color: $color-ppal;
+                            border-radius: 5px;
+                        }
+                        select{
+                            background-color: $color-ppal;
+                            opacity: 95%;
+                            border-color: $color-ppal;
+                            border-radius: 5px;
+                            option{
+                                color: #898590;
+                                width: 68%;
+                                background-color: $color-ppal;
+                            }
+                        }
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            input{
+                                width: 10%;
+                                margin-top: 5px;
+                            };
+                            p{
+                                display: inline-block;
+                                color: $color-ppal;
+                                font-family: 'Roboto', sans-serif;
+                                font-size: 16px;
+                                margin-right: 50px;
+                            }
+                        }
+                        .rango-edad{
+                            display: flex;
+                            flex-direction: column;
+                            div{
+                                display: flex;
+                                flex-direction: row;
+                                .op1{
+                                    width: 10%;
+                                }
+                                p{
+                                    display: inline-block;
+                                    color: $color-ppal;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .boton-form{
+                            width: 48%;
+                            border: 2px solid $color-terciario;
+                            border-radius: 12px;
+                            margin-bottom: 5px;
+                        }
+                    }    
+                }
+            }
+        }
+        div{
+            .section-div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .cuadro{
+                    @include cuadro;
+                    width: 49%;
+                    height: auto;
+                    margin: 10px 4px 45px 4px;
+                    padding-top: 14px;
+                    display: flex;
+                    flex-direction: column;
+                    h2{
+                        @include h2;
+                    }
+                    p{
+                        padding: 20px;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

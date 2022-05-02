@@ -1,0 +1,100 @@
+@import "../components/variables";
+@import "../components/mixins";
+
+//Estilos del header
+header{
+    .fondoheader{
+        background-image: url(../img/portada2.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
+        .container-fluid{
+            a{
+                .logo{
+                    width: 80px;
+                    height: 80px;
+                    background-color: $color-ppal;
+                    @extend %bordes-icono;
+                    &:hover{
+                        @include animacion;
+                        @keyframes agrandar{    
+                            from{
+                            transform: scale(1.0);
+                            }
+                            to{
+                            transform:scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+//Estilos del menú navegación
+.fondonav{
+    background-color: $color-secundario;
+    .nav{
+        li{
+            .navcolor{
+                color: $color-ppal;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                text-transform: uppercase;
+                &:hover{
+                    color: $color-ppal;
+                }
+            }
+            .dropdown-menu{
+                background-color: $color-secundario;
+                border: 1px solid white;
+                li{
+                    a{
+                        color: $color-ppal;
+                        &:hover{
+                            color: $color-terciario;
+                            font-weight: bold;
+                            background-color: $color-ppal;
+                        }
+                    }
+                }
+            }
+
+            .hoja-activa{
+                background-color: $color-ppal;
+                color: $color-footer;
+                /*font-weight: bolder;*/
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+//Estilos del main
+.fondoMain{
+    background: linear-gradient(180deg, rgba(129,0,0,1) 0%, rgba(206,18,18,1) 70%);
+}
+//Estilos del footer
+.fondofooter{
+    background-color: $color-footer;
+        .container-fluid{
+            div{
+                color: $color-ppal;
+                section{
+                    .btn{
+                        background-color: $color-ppal;
+                        &:hover{
+                            background-color: $color-terciario;
+                        }
+                    }
+                }
+            }
+            div{
+                .copyright{
+                    color: $color-ppal;
+                    font-style: oblique;
+                }
+            }
+        }
+}

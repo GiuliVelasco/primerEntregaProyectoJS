@@ -1,0 +1,36 @@
+@import"../components/variables";
+@import"../components/mixins";
+
+section{
+    div{
+        h1{
+            @include encabezados;
+        }
+    }
+    .cuadro{
+        @include cuadro;
+        padding-top: 10px;
+        margin-bottom: 1rem;
+        h2{
+            @include h2;
+        }
+        div{
+            margin-top: 15px;
+            .subtitulo{
+                font-size: ($tamaño_letra)-15;
+                text-decoration: overline;
+            }
+            .imgNovedades{
+                width: 510px;
+                height: 199px;
+                margin: 10px;
+            }
+            .imgNovedades1{
+                height: 199px;
+                width: auto;
+                margin: 10px;
+            }
+            
+        }
+    }
+}

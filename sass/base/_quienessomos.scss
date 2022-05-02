@@ -1,0 +1,52 @@
+@import"../components/variables";
+@import"../components/mixins";
+
+.fondoMain{
+    .container-fluid{
+        section{
+            .qs-contenedor{
+                background-color: $color-ppal;
+                margin: 0.5rem;
+                width: 48%;
+                min-height: 250px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(221, 204, 204, 0.06) 0px 0px 0px 1px;
+                .main-qs__img{
+                    width: 25%;
+                    margin: 15px;
+                    border-radius: 100px;
+                }
+                .main-qs_texto{
+                    .main-qs_nombre{
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 20px;
+                        font-style: italic;
+                        text-transform: uppercase;
+                        color: $color-terciario;
+                    }
+                    .main-qs__parrafo{
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 17px;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .foto-tatami{
+            width: 30%;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+            box-shadow: 4px 4px $color-secundario;
+        }
+    }
+}
